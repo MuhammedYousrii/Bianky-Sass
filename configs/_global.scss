@@ -1,0 +1,6 @@
+$transition: 0.3;
+$transitions-linear: (
+    short: $transition,
+    medium: ($transition * 1.25),
+    long: ($transition * 1.5)
+) !default;

@@ -1,0 +1,17 @@
+@mixin Text-Scales($map, $dir) {
+    @each $prefix, $value in $map {
+        @if quote($dir) == "y" {
+            .bk-text-scale-y-#{$prefix} {
+                @include transform(scaleY($value));
+            }
+        }@else if quote($dir) == "x" {
+            .bk-text-scale-x-#{$prefix} {
+                @include transform(scaleX($value));
+            }
+        }@else {
+            .bk-text-scale-#{$prefix} {
+                @include transform(scale($value));
+            }
+        }
+    }
+}

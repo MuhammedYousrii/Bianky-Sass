@@ -1,0 +1,26 @@
+@import 'typography/import-font';
+@import 'typography/control-font';
+@import 'typography/control-text';
+@import 'typography/underline-control';
+@import 'typography/long-classes';
+@import 'typography/weights-classes-initializer';
+@import 'typography/scales-classes-initializer';
+@import 'typography/spaces-classes-initializer';
+@import 'typography/colors-classes-initializer';
+
+@mixin icon-control($right, $bottom) {
+    img {
+        right: $right;
+    }
+}
+
+
+@mixin text-truncate-classes-generator() {
+    @each $prefix, $value in $breakpoints {
+        .text-truncate-#{$prefix} {
+            @include resMax($prefix) {
+                @include text-truncate;
+            };
+        }
+    }
+}

@@ -1,0 +1,12 @@
+@mixin line-control($width , $left, $color: $warning, $bottom: 0) {
+    content: '';
+    position: absolute;
+    bottom: $bottom;
+    left: $left;
+    height: 0.18rem;
+    width: $width;
+    background: $color;
+
+
+    @include border-radius(5rem);
+}

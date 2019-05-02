@@ -1,0 +1,7 @@
+@mixin Text-Colors($map) {
+    @each $prefix, $color in $map {
+        .bk-text-#{$prefix} {
+            color: $color;
+        }
+    }
+}

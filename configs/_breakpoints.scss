@@ -1,0 +1,21 @@
+$breakpoints: (
+    xs: 0px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1400px,
+    2k: 2000px
+);
+
+
+$rems: (
+    xs: (
+        rem: 8px,
+        percent: 5
+    ),
+    sm: 10px,
+    md: 12px,
+    lg: 14px,
+    xl: 16px,
+    2k: 18px
+) !default;

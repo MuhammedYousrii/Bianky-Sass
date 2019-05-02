@@ -1,0 +1,12 @@
+
+@mixin text-truncate-class-generator() {
+    @each $breakpoint, $value in $breakpoints {
+        .bk-text-truncate-#{$breakpoint} {
+            @include resMax($breakpoint) {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            };
+        }
+    }
+}

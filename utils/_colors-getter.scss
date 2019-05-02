@@ -1,0 +1,15 @@
+@function Darkness($value) {
+    @return map-get($dark-colors, $value);
+}
+
+@function Lightness($value) {
+    @if (type-of($value) == type-of('hello')) {
+        @return map-get($map: $whites-colors, $key: $value);   
+    }
+}
+
+@function Bootstrap-color($key) {
+    @if (type-of($value) == type-of('hello')) {    
+        @return map-get($custom-bootstrap-colors, $key);
+    }
+}

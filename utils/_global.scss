@@ -1,0 +1,63 @@
+
+
+@mixin text-truncate() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+@mixin reset-link($color) {
+    color: $color;
+    cursor: pointer;
+    &:hover,
+    &:active {
+        text-decoration: none;
+    }
+}
+
+@mixin overlay($color:#323232, $amount:0.3) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: fade-out($color, $amount)
+}
+
+@mixin section-border ($position: "top", $height: 1.5rem) {
+    content: '';
+    position: absolute;
+    @if quote($position)=="top" {
+        top: 0;
+    }
+    @else if quote($position)=="bottom" {
+        bottom: 0;
+    }
+    left: 0;
+    height: $height;
+    width: 100%;
+    z-index: 1000;
+    @include background-image(linear-gradient(to bottom, $white 1%, $light-black 2%, $black));
+}
+
+@mixin icon-align($center, $dir: right, $space: 0.5rem) {
+    @if $center == true {
+        margin: auto;
+        padding: 0.5rem;
+    }
+    @else {
+        margin-#{$dir}: $space;
+    }
+}
+
+@mixin border-section ($name, $dir) {
+    .border-#{$name}-#{$dir} {
+        @content;
+    }
+}
+
+%reset-border {
+    border: none;
+    border-radius: 0;
+}

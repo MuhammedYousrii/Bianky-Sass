@@ -1,0 +1,12 @@
+
+/*
+    Mixin that create reuseable text-weight-classes with prefix => 'text-' and map with key-value paris
+*/
+@mixin font-weights-classes-generator($map) {
+    @each $prefix, $value in $map {
+        .bx-font-#{$prefix} {
+            font-weight: $value !important;
+        }
+    }
+
+}

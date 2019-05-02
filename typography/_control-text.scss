@@ -1,0 +1,11 @@
+
+/*
+    Shorthand mixin to set text properties.
+    @Notes: transform, and align will override any style
+*/
+@mixin text-control($transform, $align, $color: black, $deco: none) {
+    text-transform: $transform  !important;
+    text-align: $align !important ;
+    text-decoration: $deco ;
+    color: $color;
+}

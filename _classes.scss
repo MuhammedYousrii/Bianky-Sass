@@ -1,0 +1,209 @@
+.img-fill {
+    display: block ;
+    height: 100% !important ;
+    width: 100%  !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.icon-space {
+    margin-right: 0.5rem;
+}
+.icon-space-extra {
+    margin-right: 1rem;
+}
+
+.divider {
+    display: block;
+    clear: both;
+    width: 100%;
+}
+.divider-thick {
+    height: 0.3rem;
+    background: $lightgray;
+}
+.divider-thin {
+    height: 1px;
+    background: fade-out($lightgray, 0.5);    
+}
+
+.case {
+    @include font-control($main-font , $semi-bold , converter(1.4, rem, perc), italic);
+}
+
+.mouse-pointer {
+    cursor: pointer;
+}
+
+.value-setter {
+    @include font-control($main-font , $bold , converter(1.6, rem, perc));
+    @include text-control(uppercase , left , $deltaErp-gray);
+}
+
+.main-font {
+    font-family: $main-font !important;
+}
+.second-font {
+    font-family: $second-font !important;
+}
+
+.overlay-master {
+    z-index: 1000;
+}
+
+.overlay {
+    position: absolute ;
+    top: 0; 
+    left: 0 ;
+    height: 100% ; width: 100% ;
+}
+
+.overlay-black {
+    background: fade-out($black, 0.4);
+}
+
+.overlay-white {
+    background: fade-out($white, 0.3);
+}
+.overlay-blue {
+    background: fade-out($delta-blue, 0.4);
+}
+
+.position-left {
+    display: inline-block;
+    position: absolute ;
+    left: 0;
+}
+.position-right  {
+    display: inline-block;
+    position: absolute ;
+    right: 0;
+}
+
+.grid-xs-height {
+    height: 10rem ;
+}
+.grid-small-height {
+    height: 20rem ;
+}
+.grid-medium-height {
+    height: 30rem ;
+}
+.grid-big-height {
+    height: 40rem ;
+}
+
+.border-right-none {
+    border-right: none !important ;
+}
+.border-top-none {
+    border-top: none !important ;
+}
+.border-left-none {
+    border-left: none !important ;
+}
+.border-bottom-none {
+    border-bottom: none !important ;
+}
+
+
+.border-blue {
+    border: 1px solid $delta-blue;
+}
+.border-bold {
+    border-width: 3px !important;
+}
+
+.border-right-radius-none {
+    @include border-right-radius(0px !important);
+}
+.border-top-radius-none {
+    @include border-top-radius(0px !important);
+}
+.border-left-radius-none {
+    @include border-left-radius(0px !important);
+}
+.border-bottom-radius-none {
+    @include border-bottom-radius(0 !important);
+}
+
+.button-wrapper {
+    @include no-margin('all');
+    @include no-padding('all');
+}
+
+.display-inline-block {
+    display: inline-block !important ;
+}
+.display-block {
+    display: block !important ;
+}
+.display-inline-flex {
+    display: inline-flex !important;
+}
+
+.bold {
+    font-weight: $bold !important;
+}
+.semi-bold {
+    font-weight: $semi-bold !important;
+}
+.medium {
+    font-weight: $medium !important;
+}
+.normal {
+    font-weight: $normal !important;
+}
+.text-small-wide {
+    letter-spacing: 1.2px !important;
+}
+.text-wide {
+    letter-spacing: 1.5px !important;
+} 
+.text-big-wide {
+    letter-spacing: 1.7px !important;
+}
+
+.padder-section {
+    padding: 4rem 1.5rem 1rem;
+}
+.circle {
+    @include border-radius(50%);
+}
+.inherit-height {
+    height: inherit;
+}
+.btn-lg-w {
+    width: 150px;
+}
+.bg-transparent {
+    background: transparent !important;
+}
+
+.transition {
+    transition: all .3s ease;
+}
+
+
+
+// --- CREATE UTILS CLASSES FOR FONT-WEIGHTS  
+@include Text-Weights($own-font-weights);
+// --- CREATE UTILS CLASSES FOR LETTER SPACING
+@include Text-Spaces($own-text-wides);
+// --- CREATE UTILS CLASSES FOR TEXT SCALING
+@include Text-Scales($scales, 'y');
+// --- CREATE UTILS CLASSES FOR TEXT TRUNCATE
+@include text-long();
+// --- CREATE UTILS CLASSES FRO BUTTONS WIDTH
+@include button-sizes($own-button-sizes);
+
+@include border-section('delta-section', 'bottom'){
+    border-bottom: 1px solid $delta-sky;
+    @include box-shadow(0 0.2rem 1rem $delta-sky)
+}

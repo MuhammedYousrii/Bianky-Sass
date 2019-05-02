@@ -1,0 +1,11 @@
+@mixin Text-Spaces($map) {
+    @each $prefix, $value in $map {
+        @each $grid-prefix, $grid-value in $breakpoints {
+            .text-wide-#{$grid-prefix}-#{$prefix} {
+                @include resMin($grid-prefix) {
+                    letter-spacing: $value;
+                }
+            }
+        }
+    }
+}

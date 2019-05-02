@@ -1,0 +1,15 @@
+/*******************
+* Generate a set of classes with name that contain bk as prefix  
+* then the attribute that will changed for this class 
+*
+*
+*******************/
+
+@mixin button-width-classes-generator($map) {
+  @each $key,
+  $value in $map {
+    .bk-btn-w-#{$key} {
+      width: $value;
+    }
+  }
+}

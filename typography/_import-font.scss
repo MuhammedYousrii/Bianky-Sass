@@ -1,0 +1,6 @@
+@mixin font_import($path , $name , $type: "ttf") {
+    @font-face {
+        font-family: $name;
+        src: url('#{$path}#{$name}.#{$type}');
+    }
+}

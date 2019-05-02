@@ -1,0 +1,15 @@
+{
+  "name": "bianky-scss",
+  "version": "1.0.0",
+  "description": "Collection of helpers, Mixins and functions that make neat layout an easy task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "scss",
+    "bianky"
+  ],
+  "author": "Muhammed Yousrii",
+  "license": "ISC"
+}

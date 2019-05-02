@@ -1,0 +1,26 @@
+@mixin align-slider-button ($angle-dir , $topOffset , $side-offset){
+    position: absolute;
+    top: $topOffset;
+    @if $angle-dir == left {
+        border-left-width: 0 !important ;
+        left: $side-offset ;
+    }@else {
+        border-right-width: 0 !important ;
+        right: $side-offset ;
+    }
+}
+
+@mixin slider-button($color, $size: small) {
+    @include reset_button(transparent, 0);
+    z-index: 1000;
+    height: 0; 
+    width: 0;
+    @if quote($size) == 'big' {
+        border-width: 2rem;
+    }@else {
+        border-width: 1rem 1rem;
+    }
+    border-color: transparent $color ;
+    border-style: solid;
+    cursor: pointer;
+}

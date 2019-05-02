@@ -1,0 +1,36 @@
+@mixin resRange($min-size, $max-size) {
+    @media only screen and (min-width: (map-get($breakpoints, $min-size) + 1)) and (max-width: map-get($breakpoints, $max-size)) {
+        @content ;
+    }
+}
+
+@mixin resMax($max-size) {
+    @media only screen and (max-width: map-get($breakpoints, $max-size)) {
+        @content ;
+    }
+}
+
+@mixin resMin($min-size) {
+    @media only screen and (min-width: map-get($breakpoints, $min-size)) {
+        @content;
+    }
+}
+
+@mixin vertical-res($min-size, $type) {
+    @if quote($type) == "min" {
+        @media only screen and (min-height: map-get($verticalBreakPoints, $min-size)) {
+            @content ;
+        }
+    }
+    @else if quote($type) == "max" {
+        @media only screen and (max-height: map-get($verticalBreakPoints, $min-size)) {
+            @content ;
+        }
+    }
+}
+
+@mixin vertical-resRange($min-size, $max-size) {
+    @media only screen and (min-height: map-get($verticalBreakPoints, $min-size)) and (max-height: map-get($verticalBreakPoints, $max-size)) {
+        @content ;
+    }
+}

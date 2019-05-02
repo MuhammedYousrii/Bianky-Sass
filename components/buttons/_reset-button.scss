@@ -1,0 +1,27 @@
+
+/*
+    Override default style added by different browsers to button element with your custom style
+    * Remove outline
+    * Change background-color
+    * change text-color if wanted
+    * change border-style if wanted
+*/
+@mixin reset_button(
+    $bg-color, 
+    $border_width, 
+    $border_style:solid, 
+    $border_color: null, 
+    $text_color: null
+    ){
+    background: $bg-color;
+    color: $text_color;
+    outline: none;
+    @if $border_width == 0 {
+        border: none;
+    }@else {
+        border-color: $border_color;
+        border-width: $border_width;
+        border-style: $border_style;
+        @include border-radius(0.3rem);
+    };
+}

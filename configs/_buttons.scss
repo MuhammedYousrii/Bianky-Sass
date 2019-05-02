@@ -1,0 +1,26 @@
+/*  List of different sizes to set button width.
+*
+*   You can these maps to create your special classes.
+*/
+
+
+
+$bk-btn-sizes: (
+    xs: 50px,
+    sm: 100px,
+    md: 150px,
+    lg: 180px,
+    xl: 220px,
+    2k: 280px,
+);
+
+
+
+$bk-btn-sizes-rem: (
+    xs: 5rem,
+    sm: 10rem,
+    md: 15rem,
+    lg: 18rem,
+    xl: 22rem,
+    2k: 28rem,
+);

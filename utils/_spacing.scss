@@ -1,0 +1,65 @@
+@mixin no-padding($type, $dir: null) {
+    @if $type == "vert" {
+        @if $dir == "top" {
+            padding-top: 0 !important;
+        }
+        @else if $dir == "bottom" {
+            padding-bottom: 0 !important;
+        }
+        @else {
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+        }
+    }
+    @else if $type=="horz" {
+        @if $dir=="left" {
+            padding-left: 0 !important;
+        }
+        @else if $dir=="right" {
+            padding-right: 0 !important;
+        }
+        @else {
+            padding-right: 0 !important;
+            padding-left: 0 !important;
+        }
+    }
+    @else if $type=="all" {
+        padding: 0 !important;
+    }
+    @else {
+        padding: $dir !important;
+    }
+}
+
+@mixin no-margin($type, $dir: null) {
+    @if $type=="vert" {
+        @if $dir=="top" {
+            margin-top: 0 !important;
+        }
+        @else if $dir=="bottom" {
+            margin-bottom: 0 !important;
+        }
+        @else {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+    }
+    @else if $type=="horz" {
+        @if $dir=="left" {
+            margin-left: 0 !important;
+        }
+        @else if $dir=="right" {
+            margin-right: 0 !important;
+        }
+        @else {
+            margin-right: 0 !important;
+            margin-left: 0 !important;
+        }
+    }
+    @else if $type=="all" {
+        margin: 0 !important;
+    }
+    @else {
+        margin: $dir !important;
+    }
+}
