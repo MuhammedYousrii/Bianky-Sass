@@ -35,17 +35,13 @@
 }
 
 .case {
-    @include font-control($main-font , $semi-bold , converter(1.4, rem, perc), italic);
+    @include font-control($main-font , 600 , converter(1.4, rem, perc), italic);
 }
 
 .mouse-pointer {
     cursor: pointer;
 }
 
-.value-setter {
-    @include font-control($main-font , $bold , converter(1.6, rem, perc));
-    @include text-control(uppercase , left , $deltaErp-gray);
-}
 
 .main-font {
     font-family: $main-font !important;
@@ -71,9 +67,6 @@
 
 .overlay-white {
     background: fade-out($white, 0.3);
-}
-.overlay-blue {
-    background: fade-out($delta-blue, 0.4);
 }
 
 .position-left {
@@ -120,9 +113,4 @@
 
 .transition {
     transition: all .3s ease;
-}
-
-@include border-section('delta-section', 'bottom'){
-    border-bottom: 1px solid $delta-sky;
-    @include box-shadow(0 0.2rem 1rem $delta-sky)
 }
