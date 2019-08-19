@@ -1,6 +1,17 @@
-@mixin Text-Colors($map) {
+/*
+    Utils to create the needed colors as text and background classes on the fly
+*/
+@mixin text-Colors-classes-initializer($map) {
     @each $prefix, $color in $map {
         .bk-text-#{$prefix} {
+            color: $color;
+        }
+    }
+}
+
+@mixin bg-colors-classes-initializer($map) {
+    @each $prefix, $color in $map {
+        .bk-bg-#{$prefix} {
             color: $color;
         }
     }
