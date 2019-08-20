@@ -1,0 +1,7 @@
+@function is-str($value) {
+    @if (type-of($value) == type-of('hello')) {
+        @return true;
+    } @else {
+        @return false;
+    }  
+}
