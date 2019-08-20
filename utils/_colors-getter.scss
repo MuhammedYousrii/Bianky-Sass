@@ -16,6 +16,6 @@
 
 @function Theme-color($key) {
     @if (is-str($key)) {
-        @return map-get($theme-colors, $key);
+        @return map-get($bk-theme-colors, $key);
     }
 }
