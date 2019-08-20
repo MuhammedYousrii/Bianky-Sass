@@ -3,13 +3,19 @@
 }
 
 @function Lightness($value) {
-    @if (type-of($value) == type-of('hello')) {
-        @return map-get($map: $whites-colors, $key: $value);   
+    @if (is-str($value)) {
+        @return map-get($whites-colors, $value);   
     }
 }
 
 @function Bootstrap-color($key) {
-    @if (type-of($value) == type-of('hello')) {    
+    @if (is-str($key)) {    
         @return map-get($custom-bootstrap-colors, $key);
+    }
+}
+
+@function Theme-color($key) {
+    @if (is-str($key)) {
+        @return map-get($theme-colors, $key);
     }
 }
