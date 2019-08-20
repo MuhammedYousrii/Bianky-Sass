@@ -1,16 +1,21 @@
 /********
 * Here is the entry point for bianky scss library
-* We use "Roboto" as default value for {$main-font} variable 
+* We use "Arial" as default value for {$main-font} variable
+* We use "Calibri" as default value or {$second-font} variable 
 * you can change it on your custom file
+* 
+*
+* Please note that you classes file depend on {$main-font} {$second-font} variables
+*
+* Please note that you must override any existed variables before importing lib
 *
 *
+* Thanks for trusting BIANKY 
 *********/
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:400');
-@import url('https://fonts.googleapis.com/css?family=Blinker&display=swap" rel="stylesheet');
 
-$main-font: 'Roboto', sans-serif;
-$second-font: 'Blinker', sans-serif;
+$main-font: 'Arial', sans-serif;
+$second-font: 'Calibri', sans-serif;
 
 
 
