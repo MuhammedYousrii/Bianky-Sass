@@ -4,7 +4,7 @@
 
 
 
-@function converter($value, $current-unit, $convert-unit) {
+@function converter($value, $current-unit, $convert-unit: "perc") {
     
     // PERCENTAGE BASE FOR ROOT ELEMENT THAT EQ 10PX
     $root-base: 62.5;
@@ -12,16 +12,19 @@
     $px-base-for-perc: 16; // Converting from px Based On $px Base
 
 
+    // Convert From PX to percentage 
     @if $current-unit == px {
-        @if $convert-unit == perc {
+        @if $convert-unit == "perc" {
             @return percentage($value / $px-base-for-perc);
         }
         @else if $convert-unit == rem {
             @return ($value / $px-base)rem;
         }
     }
+
+    // Convert From Rem to percentage
     @else if $current-unit == rem {
-        @if $convert-unit == perc {
+        @if $convert-unit == "perc" {
             @return ($value * $root-base) * 1%;
         }
         @else if $convert-unit == px {
